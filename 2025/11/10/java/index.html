@@ -19,22 +19,26 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="前言：这是一篇高质量的博客 快速开始怎么学呢">
+    <meta name="description" content="欢迎来到这篇 Java 教程！在 Java 开发中，处理一组对象是至关重要的任务。Java 集合框架（Collections Framework）为此提供了一套强大的工具，而 List 接口是其中最核心、最常用的部分之一。 本文将带你深入了解 List 接口，以及它最常见的两个实现类：ArrayList 和 LinkedList。 什么是 List 接口？在 Java 中，List 是一个接口（j">
 <meta property="og:type" content="article">
-<meta property="og:title" content="教你从头到尾部署mysql">
-<meta property="og:url" content="http://example.com/2025/11/07/test/index.html">
+<meta property="og:title" content="Java 教程：深入理解 List 接口">
+<meta property="og:url" content="http://example.com/2025/11/10/java/index.html">
 <meta property="og:site_name" content="Kriox">
-<meta property="og:description" content="前言：这是一篇高质量的博客 快速开始怎么学呢">
+<meta property="og:description" content="欢迎来到这篇 Java 教程！在 Java 开发中，处理一组对象是至关重要的任务。Java 集合框架（Collections Framework）为此提供了一套强大的工具，而 List 接口是其中最核心、最常用的部分之一。 本文将带你深入了解 List 接口，以及它最常见的两个实现类：ArrayList 和 LinkedList。 什么是 List 接口？在 Java 中，List 是一个接口（j">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-11-07T06:41:26.000Z">
-<meta property="article:modified_time" content="2025-11-11T02:24:07.235Z">
+<meta property="article:published_time" content="2025-11-10T13:40:15.000Z">
+<meta property="article:modified_time" content="2025-11-11T02:41:23.519Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="教程">
+<meta property="article:tag" content="ArrayList">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="LinkedList">
+<meta property="article:tag" content="List">
+<meta property="article:tag" content="集合框架">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>教你从头到尾部署mysql - Kriox</title>
+  <title>Java 教程：深入理解 List 接口 - Kriox</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +204,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="教你从头到尾部署mysql"></span>
+            <span id="subtitle" data-typed-text="Java 教程：深入理解 List 接口"></span>
           
         </div>
 
@@ -211,8 +215,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-11-07 14:41" pubdate>
-          2025年11月7日 下午
+        <time datetime="2025-11-10 21:40" pubdate>
+          2025年11月10日 晚上
         </time>
       </span>
     
@@ -223,7 +227,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          20 字
+          1.2k 字
         
       </span>
     
@@ -234,7 +238,7 @@
         
         
         
-          1 分钟
+          11 分钟
         
       </span>
     
@@ -271,13 +275,99 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">教你从头到尾部署mysql</h1>
+            <h1 id="seo-header">Java 教程：深入理解 List 接口</h1>
             
             
               <div class="markdown-body">
                 
-                <p>前言：这是一篇高质量的博客</p>
-<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><p>怎么学呢</p>
+                <p>欢迎来到这篇 Java 教程！在 Java 开发中，处理一组对象是至关重要的任务。Java 集合框架（Collections Framework）为此提供了一套强大的工具，而 <code>List</code> 接口是其中最核心、最常用的部分之一。</p>
+<p>本文将带你深入了解 <code>List</code> 接口，以及它最常见的两个实现类：<code>ArrayList</code> 和 <code>LinkedList</code>。</p>
+<h2 id="什么是-List-接口？"><a href="#什么是-List-接口？" class="headerlink" title="什么是 List 接口？"></a>什么是 List 接口？</h2><p>在 Java 中，<code>List</code> 是一个接口（<code>java.util.List</code>），它继承自 <code>Collection</code> 接口。<code>List</code> 代表一个<strong>有序的</strong>集合，它允许我们存储重复的元素。</p>
+<p><code>List</code> 接口的主要特点包括：</p>
+<ul>
+<li><strong>有序性</strong>：<code>List</code> 中的元素是按照插入顺序存储的，你可以精确地控制每个元素在列表中的位置。</li>
+<li><strong>允许重复</strong>：与 <code>Set</code> 不同，<code>List</code> 允许包含重复的元素。</li>
+<li><strong>基于索引的访问</strong>：<code>List</code> 提供了通过整数索引（位置）来访问元素的方法，如 <code>get(int index)</code>、<code>set(int index, E element)</code> 等。</li>
+</ul>
+<h2 id="常用的-List-实现类"><a href="#常用的-List-实现类" class="headerlink" title="常用的 List 实现类"></a>常用的 List 实现类</h2><p><code>List</code> 只是一个接口（规范），我们需要使用它的具体实现类来创建对象。最常用的两个实现类是 <code>ArrayList</code> 和 <code>LinkedList</code>。</p>
+<h3 id="1-ArrayList-动态数组"><a href="#1-ArrayList-动态数组" class="headerlink" title="1. ArrayList (动态数组)"></a>1. ArrayList (动态数组)</h3><p><code>ArrayList</code> 是 <code>List</code> 接口最常见的实现，它内部是基于<strong>动态数组</strong>（Array）来实现的。</p>
+<ul>
+<li><strong>特性</strong>：查询速度快，因为数组支持通过索引快速访问（O(1) 时间复杂度）。但是，在列表<strong>中间</strong>插入或删除元素较慢，因为它需要移动后续所有元素（O(n) 时间复杂度）。</li>
+<li><strong>适用场景</strong>：当你需要<strong>频繁地读取和访问</strong>元素，而插入和删除操作相对较少时，<code>ArrayList</code> 是最佳选择。</li>
+</ul>
+<p><strong>代码示例：</strong></p>
+<pre><code class="language-java">// 导入 List 和 ArrayList
+import java.util.List;
+import java.util.ArrayList;
+
+public class ArrayListExample {
+    public static void main(String[] args) {
+        // 创建一个 ArrayList 实例
+        List&lt;String&gt; fruits = new ArrayList&lt;&gt;();
+
+        // 1. 添加元素
+        fruits.add(&quot;苹果&quot;);
+        fruits.add(&quot;香蕉&quot;);
+        fruits.add(&quot;橘子&quot;);
+        System.out.println(&quot;列表内容: &quot; + fruits);
+
+        // 2. 访问元素 (通过索引)
+        String firstFruit = fruits.get(0);
+        System.out.println(&quot;第一个水果: &quot; + firstFruit);
+
+        // 3. 删除元素 (通过索引)
+        fruits.remove(1); // 删除 &quot;香蕉&quot;
+        System.out.println(&quot;删除后: &quot; + fruits);
+
+        // 4. 检查大小
+        System.out.println(&quot;列表大小: &quot; + fruits.size());
+    }
+}
+2. LinkedList (链表)LinkedList 内部是基于双向链表（Doubly-Linked List）来实现的。特性：在列表中间插入或删除元素非常快（O(1) 时间复杂度），因为它只需要改变前后节点的指针。但是，查询和访问元素（get(int index)）较慢，因为它需要从头或尾开始遍历链表（O(n) 时间复杂度）。适用场景：当你需要频繁地在列表开头、结尾或中间进行插入和删除操作时，LinkedList 更合适。代码示例：Java// 导入 List 和 LinkedList
+import java.util.List;
+import java.util.LinkedList;
+
+public class LinkedListExample {
+    public static void main(String[] args) {
+        // 创建一个 LinkedList 实例
+        List&lt;String&gt; animals = new LinkedList&lt;&gt;();
+
+        // 1. 添加元素
+        animals.add(&quot;狗&quot;);
+        animals.add(&quot;猫&quot;);
+        animals.add(&quot;鸟&quot;);
+
+        // 2. 在开头添加 (LinkedList 特有方法，但 List 接口通过 add(index, E) 也支持)
+        ((LinkedList&lt;String&gt;) animals).addFirst(&quot;老鼠&quot;);
+        System.out.println(&quot;列表内容: &quot; + animals);
+
+        // 3. 删除最后一个
+        ((LinkedList&lt;String&gt;) animals).removeLast();
+        System.out.println(&quot;删除后: &quot; + animals);
+    }
+}
+ArrayList vs. LinkedList选择 ArrayList 还是 LinkedList 是面试中常见的问题。关键在于理解它们底层的数据结构差异。这里是一个简单的对比表格：特性ArrayList (动态数组)LinkedList (双向链表)底层结构动态数组双向链表随机访问 (Get)快 (O(1))慢 (O(n))插入 (Add)结尾快 (O(1))，中间慢 (O(n))快 (O(1)) (如果已有迭代器)删除 (Remove)结尾快 (O(1))，中间慢 (O(n))快 (O(1)) (如果已有迭代器)内存占用较少（只需要数组本身）较大（每个节点都需额外存储前后指针）如何遍历 List遍历 List 是最常见的操作。推荐使用 for-each 循环。1. 使用 for-each 循环 (推荐)这是最简洁、最易读的方式。JavaList&lt;String&gt; names = new ArrayList&lt;&gt;();
+names.add(&quot;张三&quot;);
+names.add(&quot;李四&quot;);
+names.add(&quot;王五&quot;);
+
+for (String name : names) {
+    System.out.println(name);
+}
+2. 使用迭代器 (Iterator)当需要在遍历时安全地删除元素时，必须使用迭代器。Javaimport java.util.Iterator;
+
+// ... (省略 names 列表的创建)
+
+Iterator&lt;String&gt; iterator = names.iterator();
+while (iterator.hasNext()) {
+    String name = iterator.next();
+    if (name.equals(&quot;李四&quot;)) {
+        iterator.remove(); // 安全删除
+    }
+}
+System.out.println(&quot;删除“李四”后: &quot; + names);
+总结List 接口是 Java 集合框架的基石。在 ArrayList 和 LinkedList 之间选择时，请记住这个简单的原则：默认使用 ArrayList：它在大多数情况下性能都很好，特别是查询和遍历操作。仅在 ArrayList 成为性能瓶颈时（例如，你确定需要在一个巨大列表的中间进行成千上万次插入/删除），才考虑使用 LinkedList。希望这篇教程能帮助你打好 Java 集合的基础！
+</code></pre>
 
                 
               </div>
@@ -286,11 +376,47 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Java-%E6%95%99%E7%A8%8B/" class="category-chain-item">Java 教程</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Java-%E6%95%99%E7%A8%8B/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/" class="category-chain-item">编程基础</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
   
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%95%99%E7%A8%8B/" class="print-no-link">#教程</a>
+        <a href="/tags/Java/" class="print-no-link">#Java</a>
+      
+        <a href="/tags/%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/" class="print-no-link">#集合框架</a>
+      
+        <a href="/tags/List/" class="print-no-link">#List</a>
+      
+        <a href="/tags/ArrayList/" class="print-no-link">#ArrayList</a>
+      
+        <a href="/tags/LinkedList/" class="print-no-link">#LinkedList</a>
       
     </div>
   
@@ -302,8 +428,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>教你从头到尾部署mysql</div>
-      <div>http://example.com/2025/11/07/test/</div>
+      <div>Java 教程：深入理解 List 接口</div>
+      <div>http://example.com/2025/11/10/java/</div>
     </div>
     <div class="license-meta">
       
@@ -315,7 +441,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年11月7日</div>
+          <div>2025年11月10日</div>
         </div>
       
       
@@ -347,18 +473,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/11/10/java/" title="Java 教程：深入理解 List 接口">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Java 教程：深入理解 List 接口</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/11/07/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2025/11/07/test/" title="教你从头到尾部署mysql">
+                        <span class="hidden-mobile">教你从头到尾部署mysql</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
